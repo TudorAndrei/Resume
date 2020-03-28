@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=.5in]{geometry}
+\pagenumbering{gobble}
+\titleformat{\section}
+{\huge}
+{}
+{0em}
+{\filcenter\bfseries\lowercase}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{1em}
+{}
+
+
+\titlespacing{\subsection}
+{0em}
+{0em}
+{0em}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}[]
+
+\titlespacing{\subsubsection}
+{0em}
+{0em}
+{0.20em}
+
+
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\huge\bfseries
+\theauthor}
+
+\end{center}
+\vspace{.25em}
+\begin{flushleft}{
+Birth: September 16, 1997 \newline
+Address: Y{\H O}-KYL{\H A} 12A, Turku, Finland \newline
+Phone: (+40)-761-471-916 \newline
+E-Mail: tudorandrei.dumitrascu@gmail.com \newline
+GitHub: github.com/TudorAndrei \newline}
+\end{flushleft}
+}
+
+
+
+\begin{document}
+\title{R\`esum\`e}
+\author{Tudor Andrei Dumitrascu}
+
+\maketitle
+
+
+\section{Experience}
+\subsection{Continental Powertrain Egineering, Timisoara,Romania 2019}
+\subsubsection{Embedded/Arduino Developer:}
+Development of an electronic module with the aim of collecting data from an electric vehicle trough the internal CAN Bus and storing the data (SD Card).
+\subsection{EDCA department of PUB, Bucharest,Romania 2019}
+\subsubsection{Laboratory Teacher Assistant:}
+Coached students during the Laboratory of Digital Integrated Circuits, to develop Verilog programs for an FPGA board.
+
+\section{Education}
+\subsection{Facultatea de Electronica Telecomunicatii si Tehnologia Informatiei, Bucharest, Romania 2016-2020}
+Computer Programming, Data Structures and Algorithms, Electrical Egineering,Object-Oriented Programming, $\mu$Processor Architecture, Circuit analisys, Digital Integrated Circuits, 
+Analog Integrated Circuits, $\mu$Controllers, Decision and Estimation in Information Processing, Digital Signal Processing, Communication Systems
+
+\subsection{{\AA}bo Akademi, Turku, Finland 2019-2020}
+Deep Learning, Graph Algorithms, Web Server Development, Wireless Digital Communication, Introduction to Data Science, Machine Learning, System architecture of IoT Cloud Computing, Safety Software,
+Lab internishp, Project Course
+
+\subsection{Academy+Plus/Ecol{\'e} 42, Bucharest, Romania 2018}
+The basics of C Programming: functions, arrays, pointers.
+The basics of the UNIX OS: file manipulations, navigation, permissions.
+Advanced aspects of C Programming: Data Structures and Algorithms.
+Programming projects in C: Libft, Fillit, Get\_Next\_Line
+
+\section{Projects}
+\subsubsection{Programming}
+Libft, Fillit, Get\_Next\_Line, Quote Generator Web Page,  
+\subsubsection{Hardware}
+CAN data logger, Wien Bridge Sinusoidal Oscillator with AGC
+
+
+\section{Technical Skills}
+\subsubsection{Software}
+C/C++, JavaScript, Python, Tensorflow
+\subsubsection{Hardware}
+Verilog, Arduino, Digital Integrated Circuits
+\subsubsection{Markup}
+{\LaTeX}, HTML/CSS, Markdown
+\subsubsection{Workflow}
+Git
+
+\section{General Skills}
+\subsubsection{Languages}
+Romanian(mother tongue), English (fluent)
+\subsubsection{Soft Skills}
+Teamwork, Time management, Adaptability
+\end{document}}
