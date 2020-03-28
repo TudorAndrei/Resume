@@ -5,3 +5,7 @@ git: clean
 
 clean:
 	echo "clean"
+
+all: clean
+	pdflatex resume.tex
+	zathura resume.pdf
