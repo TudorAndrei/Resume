@@ -4,8 +4,10 @@ git: clean
 	git push
 
 clean:
-	echo "clean"
+	rm resume.pdf
+	rm resume.aux
+	rm resume.log
 
-all: clean
+build: clean
 	pdflatex resume.tex
 	zathura resume.pdf
