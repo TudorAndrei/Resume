@@ -9,5 +9,9 @@ clean:
 	rm resume.log
 
 build: clean
-	pdflatex resume.tex
-	zathura resume.pdf
+	typst compile main.typ TudorAndrei-Dumitrascu-Resume.pdf
+
+watch:
+	typst watch main.typ TudorAndrei-Dumitrascu-Resume.pdf
+
+
