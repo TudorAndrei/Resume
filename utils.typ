@@ -1,4 +1,4 @@
-#import "@preview/scienceicons:0.1.0": orcid-icon
+// Import removed to avoid font warnings
 #import "links.typ": *
 
 #let resume(
@@ -91,9 +91,9 @@
           contact-item(location),
           contact-item(email, link-type: "mailto:"),
           github-info("Github"),
-          linkedin-info("LinedIn", url: "https://www.linkedin.com/company/bmw-group/", rgb("0166B1")),
+          linkedin-info("LinkedIn"),
           contact-item(personal-site, link-type: "https://"),
-          contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
+          contact-item(orcid, link-type: "https://orcid.org/"),
         )
         items.filter(x => x != none).join("  |  ")
       }
@@ -209,11 +209,13 @@
   date: "",
 ) = {
   [
-    *#name*, #issuer
     #if url != "" {
-      [ (#link("https://" + url)[#url])]
+      [#link("https://" + url)[*#name*]]
+    } else {
+      [*#name*]
     }
-    #h(1fr) #date
+    #h(1fr)
+    #align(right)[#issuer#if date != "" [ (#date)]]
   ]
 }
 

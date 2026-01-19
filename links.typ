@@ -1,9 +1,9 @@
-#import "@preview/fontawesome:0.5.0": *
+#import "@preview/fontawesome:0.6.0": *
 
 #let icon-link-generator(
   name,
   url,
-  icon,
+  icon_name,
   ..args
 ) = {
     if name.len() == 0 {
@@ -19,8 +19,7 @@
       ..args
     )
 
-    let clickable_link
-      clickable_link = url
+    let clickable_link = url
 
     // unify all links
     // Google Scholar doesn't find the profile if a slash is appended -.-'
@@ -28,10 +27,12 @@
       clickable_link = clickable_link + "/"
     }
 
-    // content
-    icon()
-    " "
-    link(clickable_link)[#styled_text]
+    // Return all content wrapped in a single content block
+    [
+      #fa-icon(icon_name)
+      #" "
+      #link(clickable_link)[#styled_text]
+    ]
 }
 
 
@@ -40,7 +41,7 @@
   url: "https://www.facebook.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-facebook, ..args)
+  icon-link-generator(name, url, "facebook", ..args)
 }
 
 #let instagram-info(
@@ -48,7 +49,7 @@
   url: "https://www.instagram.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-instagram, ..args)
+  icon-link-generator(name, url, "instagram", ..args)
 }
 
 #let tiktok-info(
@@ -65,7 +66,7 @@
   url: "https://www.youtube.com/@",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-youtube, ..args)
+  icon-link-generator(name, url, "youtube", ..args)
 }
 
 #let vimeo-info(
@@ -73,7 +74,7 @@
   url: "https://vimeo.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-vimeo, ..args)
+  icon-link-generator(name, url, "vimeo", ..args)
 }
 
 #let linkedin-info(
@@ -81,7 +82,7 @@
   url: "https://www.linkedin.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-linkedin, ..args)
+  icon-link-generator(name, url, "linkedin", ..args)
 }
 
 #let xing-info(
@@ -89,7 +90,7 @@
   url: "https://www.xing.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-xing, ..args)
+  icon-link-generator(name, url, "xing", ..args)
 }
 
 #let github-info(
@@ -97,7 +98,7 @@
   url: "https://github.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-github, ..args)
+  icon-link-generator(name, url, "github", ..args)
 }
 
 #let gitlab-info(
@@ -105,7 +106,7 @@
   url: "https://gitlab.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-gitlab, ..args)
+  icon-link-generator(name, url, "gitlab", ..args)
 }
 
 #let bitbucket-info(
@@ -113,33 +114,16 @@
   url: "https://bitbucket.org/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-bitbucket, ..args)
+  icon-link-generator(name, url, "bitbucket", ..args)
 }
 
-// TODO: no icon available
-// #let codeberg-info(
-//   name,
-//   url: "https://codeberg.org/",
-//   ..args
-// ) = {
-//   icon-link-generator(name, url, fa-question, ..args)
-// }
-
-// TODO: no icon available
-// #let sourceforge-info(
-//   name,
-//   url: "https://sourceforge.net/",
-//   ..args
-// ) = {
-//   icon-link-generator(name, url, fa-question, ..args)
-// }
 
 #let docker-info(
   name,
   url: "https://hub.docker.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-docker, ..args)
+  icon-link-generator(name, url, "docker", ..args)
 }
 
 #let stackoverflow-info(
@@ -165,7 +149,7 @@
   url: "https://www.skype.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-skype, ..args)
+  icon-link-generator(name, url, "skype", ..args)
 }
 
 #let discord-info(
@@ -173,7 +157,7 @@
   url: "https://discord.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-discord, ..args)
+  icon-link-generator(name, url, "discord", ..args)
 }
 
 #let twitter-info(
@@ -181,7 +165,7 @@
   url: "https://twitter.com/",
   ..args
 ) = {
-  icon-link-generator(name, url, fa-twitter, ..args)
+  icon-link-generator(name, url, "twitter", ..args)
 }
 
 #let x-twitter-info(
@@ -201,30 +185,6 @@
   icon-link-generator(name, url, fa-icon.with("orcid"), ..args)
 }
 
-// TODO: no icon available
-// #let tryhackme-info(
-//   name,
-//   url: "https://tryhackme.com/p/",
-//   ..args
-// ) = {
-//   icon-link-generator(name, url, fa-question, ..args)
-// }
-
-#let mastodon-info(
-  name,
-  url: "https://mastodon.social/@",
-  ..args
-) = {
-  icon-link-generator(name, url, fa-icon.with("mastodon"), ..args)
-}
-
-#let researchgate-info(
-  name,
-  url: "https://www.researchgate.net/profile/",
-  ..args
-) = {
-  icon-link-generator(name, url, fa-icon.with("researchgate"), ..args)
-}
 
 #let google-scholar-info(
   name,
