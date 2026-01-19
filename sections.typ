@@ -171,10 +171,6 @@
         url: entry.at("url", default: ""),
         date: entry.at("date", default: "")
       )
-      // Add space between entries, except after the last one
-      if i < entries.len() - 1 {
-        v(0.5em)
-      }
     }
   ]
 }

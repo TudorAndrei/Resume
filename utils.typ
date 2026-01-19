@@ -214,7 +214,6 @@
     } else {
       [*#name*]
     }
-    #h(1fr)
     #align(right)[#issuer#if date != "" [ (#date)]]
   ]
 }
