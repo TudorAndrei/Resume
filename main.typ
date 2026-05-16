@@ -4,7 +4,7 @@
 #let position = "AI Engineer"
 #let location = "Bucharest, Romania"
 #let email = "tudorandrei.dumitrascu@gmail.com"
-#let github = "https://github.com/tudorandrei"
+#let github = "https://github.com/TudorAndrei/"
 #let linkedin = "https://www.linkedin.com/in/tudor-pythia/"
 #let phone = "(+40)-761-471-916"
 
@@ -36,6 +36,13 @@
 == Work Experience
 
 #work(
+  title: "CTO",
+  location: "Bucharest, Romania",
+  company: "Pythia Sociodynamical Technologies",
+  dates: dates-helper(start-date: "Mar 2026", end-date: "Present"),
+)
+
+#work(
   title: "Lead AI Engineer",
   location: "Bucharest, Romania",
   company: "Paradigm Research",
@@ -49,7 +56,7 @@
   title: "Co-Founder & CTO",
   location: "Bucharest, Romania",
   company: "Pythia Sociodynamical Technologies",
-  dates: dates-helper(start-date: "Jun 2022", end-date: "Present"),
+  dates: dates-helper(start-date: "Jun 2022", end-date: "Sep 2025"),
 )
 - Architected NVIDIA Triton-based ML inference pipeline that processes 1,000+ news articles per second with \<100ms latency, reducing infrastructure costs by 35%
 - Engineered LLM & DSPy powered data extraction with pipeline with intelligent content hashing, increasing data extraction accuracy by \>40% while reducing inference costs
@@ -116,3 +123,17 @@
 // )
 // - Developed real-time boat detection and tracking system using computer vision and AI
 // - Successfully commercialized project through acquisition by maritime autonomous solutions company
+
+== Certifications
+
+#certificates(
+  name: "ISO/IEC 42001:2023 Internal Auditor",
+  issuer: "TÜV Thüringen Karpat",
+  date: "Apr 2026",
+)
+
+#certificates(
+  name: "ISO/IEC 27001:2022 External Auditor",
+  issuer: "CERTINSPECT Register",
+  date: "Feb 2023",
+)

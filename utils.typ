@@ -90,8 +90,8 @@
           contact-item(phone),
           contact-item(location),
           contact-item(email, link-type: "mailto:"),
-          github-info("Github"),
-          linkedin-info("LinkedIn"),
+          if github != "" { github-info("Github", url: github) },
+          if linkedin != "" { linkedin-info("LinkedIn", url: linkedin) },
           contact-item(personal-site, link-type: "https://"),
           contact-item(orcid, link-type: "https://orcid.org/"),
         )

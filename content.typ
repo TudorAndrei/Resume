@@ -8,7 +8,7 @@
   position: "AI Engineer",
   location: "Bucharest, Romania",
   email: "tudorandrei.dumitrascu@gmail.com",
-  github: "https://github.com/TudorAndrei",
+  github: "https://github.com/TudorAndrei/",
   linkedin: "https://www.linkedin.com/in/tudor-pythia/",
   phone: "(+40)-761-471-916"
 )
@@ -26,10 +26,19 @@
 // Work Experience
 #let work_experience = (
   (
+    title: "CTO",
+    company: "Pythia Sociodynamical Technologies",
+    location: "Bucharest, Romania",
+    dates: dates-helper(start-date: "Mar 2026", end-date: "Present"),
+    bullets: (
+      "Leading technical strategy and engineering operations",
+    )
+  ),
+  (
     title: "AI Engineer",
     company: "CogniSync",
     location: "Bucharest, Romania",
-    dates: dates-helper(start-date: "Sep 2025", end-date: "Present"),
+    dates: dates-helper(start-date: "Sep 2025", end-date: "Mar 2026"),
     bullets: (
       "Developed core platform feature that ingested complex legal playbooks and templates to create structured rule systems",
       "Engineered AI system capable of processing and understanding large legal documents, reducing manual review time",
@@ -168,6 +177,18 @@
 
 // Certificates
 #let certificates = (
+  (
+    name: "ISO/IEC 42001:2023 Internal Auditor",
+    issuer: "TÜV Thüringen Karpat",
+    url: "",
+    date: "Apr 2026"
+  ),
+  (
+    name: "ISO/IEC 27001:2022 External Auditor",
+    issuer: "CERTINSPECT Register",
+    url: "",
+    date: "Feb 2023"
+  ),
   (
     name: "Deep Learning Specialization",
     issuer: "DeepLearning.AI",
