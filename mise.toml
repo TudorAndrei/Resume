@@ -1,2 +1,124 @@
 [tools]
 typst = "latest"
+
+[env]
+CV_OUTPUT = "TudorAndrei-Dumitrascu-CV.pdf"
+RESUME_OUTPUT = "TudorAndrei-Dumitrascu-Resume.pdf"
+
+[tasks.cv]
+description = "compile the full CV and open it"
+dir = "{{config_root}}"
+run = '''
+typst compile cv.typ "$CV_OUTPUT"
+echo "Opening $CV_OUTPUT..."
+{ command -v xdg-open >/dev/null 2>&1 && xdg-open "$CV_OUTPUT" || open "$CV_OUTPUT"; } >/dev/null 2>&1 &
+'''
+
+[tasks.watch-cv]
+description = "watch the CV file for changes and auto-rebuild"
+dir = "{{config_root}}"
+run = 'typst watch cv.typ "$CV_OUTPUT"'
+
+[tasks.app]
+description = "create or compile an application resume (Usage: mise run app applications/OpenAI-AIEngineer)"
+dir = "{{config_root}}"
+run = '''
+APP_DIR="{{arg(name="app_dir")}}"
+if [ ! -d "$APP_DIR" ]; then
+	echo "Creating directory $APP_DIR..."
+	mkdir -p "$APP_DIR"
+	cp templates/application_template.typ "$APP_DIR/resume.typ"
+	echo "Template copied to $APP_DIR/resume.typ"
+fi
+if [ ! -f "$APP_DIR/resume.typ" ]; then
+	cp templates/application_template.typ "$APP_DIR/resume.typ"
+fi
+if [ ! -f "$APP_DIR/config.json" ]; then
+	echo "Error: config.json not found in $APP_DIR/"
+	echo "Please create config.json before compiling."
+	exit 1
+fi
+typst compile --root=. "$APP_DIR/resume.typ" "$APP_DIR/$RESUME_OUTPUT"
+echo "Resume compiled: $APP_DIR/$RESUME_OUTPUT"
+echo "Opening the resume..."
+{ command -v xdg-open >/dev/null 2>&1 && xdg-open "$APP_DIR/$RESUME_OUTPUT" || open "$APP_DIR/$RESUME_OUTPUT"; } >/dev/null 2>&1 &
+'''
+
+[tasks.compile-app]
+description = "compile an application resume (Usage: mise run compile-app applications/OpenAI-AIEngineer)"
+dir = "{{config_root}}"
+run = '''
+APP_DIR="{{arg(name="app_dir")}}"
+if [ ! -d "$APP_DIR" ]; then
+	echo "Error: Application directory $APP_DIR does not exist."
+	exit 1
+fi
+if [ ! -f "$APP_DIR/config.json" ]; then
+	echo "Error: config.json not found in $APP_DIR/"
+	exit 1
+fi
+typst compile --root=. "$APP_DIR/resume.typ" "$APP_DIR/$RESUME_OUTPUT"
+echo "Resume compiled: $APP_DIR/$RESUME_OUTPUT"
+'''
+
+[tasks.watch-app]
+description = "watch an application resume for changes (Usage: mise run watch-app applications/OpenAI-AIEngineer)"
+dir = "{{config_root}}"
+run = '''
+APP_DIR="{{arg(name="app_dir")}}"
+if [ ! -d "$APP_DIR" ]; then
+	echo "Error: Application directory $APP_DIR does not exist."
+	exit 1
+fi
+if [ ! -f "$APP_DIR/config.json" ]; then
+	echo "Error: config.json not found in $APP_DIR/"
+	exit 1
+fi
+typst watch --root=. "$APP_DIR/resume.typ" "$APP_DIR/$RESUME_OUTPUT"
+'''
+
+[tasks.list]
+description = "list all applications"
+dir = "{{config_root}}"
+run = '''
+echo "Available Application Resumes:"
+for dir in applications/*/; do
+	if [ -d "$dir" ]; then
+		echo "  $(basename "$dir")"
+	fi
+done
+'''
+
+[tasks.build-all]
+description = "build the CV and all application resumes"
+dir = "{{config_root}}"
+depends = ["cv"]
+run = '''
+echo "Building all application resumes..."
+for dir in applications/*/; do
+	if [ -d "$dir" ]; then
+		base=$(basename "$dir")
+		echo "Building resume for $base..."
+		typst compile --root=. "$dir/resume.typ" "$dir/$RESUME_OUTPUT"
+	fi
+done
+echo "All resumes built successfully!"
+'''
+
+[tasks.clean]
+description = "remove all generated PDF files"
+dir = "{{config_root}}"
+run = '''
+rm -f *.pdf
+rm -f applications/*/*.pdf
+echo "All PDF files removed."
+'''
+
+[tasks.git]
+description = "backup all files to git repository"
+dir = "{{config_root}}"
+run = '''
+git add .
+git commit -m "backup the files"
+git push
+'''
