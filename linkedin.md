@@ -1,15 +1,15 @@
 # About
 
-I specialize in using technology to simplify life's hassles and automate repetitive tasks. Deep Learning within the field of Artificial Intelligence is my expertise, though I have experience with web design and databases as well.
+I position my work as AI architecture for high-stakes, regulated domains: designing systems that can be shipped, governed, and defended under real business pressure.
 
-Currently, I'm the AI Engineer at CogniSync, where my responsibilities are diverse:
+My background combines production AI engineering with AI governance and audit work:
 
-- Developing core platform features for legal document processing.
-- Building and maintaining dependable AI infrastructure.
-- Engineering AI systems for understanding large legal documents.
-- Implementing RAG-based solutions for legal queries.
+- Architecting AI systems for legal, banking, and finance workflows.
+- Building dependable AI infrastructure, RAG systems, and document intelligence products.
+- Translating AI strategy into system design, evaluation, monitoring, and controls.
+- Assessing AI governance and documentation against ISO/IEC 42001 expectations.
 
-  Feel free to connect to share insights on AI, tech innovation, or simply to chat about potential collaborations
+Feel free to connect to discuss AI architecture, governance, or systems that need to work in the real world.
 
 ---
 
