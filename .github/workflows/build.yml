@@ -1,18 +1,17 @@
 name: Build Typst document
 on: [push, workflow_dispatch]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Typst Compile
         uses: lvignoli/typst-action@main
         with:
-          source_file: main.typ
+          source_file: cv.typ
 
       - name: Rename PDF
-        run: mv main.pdf TudorAndrei-Dumitrascu-Resume.pdf
+        run: mv cv.pdf TudorAndrei-Dumitrascu-Resume.pdf
