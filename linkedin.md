@@ -15,9 +15,34 @@ Feel free to connect to discuss AI architecture, governance, or systems that nee
 
 # Experience
 
+## CTO | Pythia Sociodynamical Technologies
+
+Mar 2026 – Present | Bucharest, Romania
+
+• Setting technical direction and running engineering operations
+• Building tooling for AI engineering: eval harnesses, agent infrastructure, developer workflow
+• Delivering client AI projects end to end, plus AI consultancy and workshops
+
+## Chief Technology Officer | Flow Copilot
+
+Feb 2026 – Present | Bucharest, Romania
+
+• Built Flow Copilot, an AI task-management app for people with ADHD (iOS/Android/web)
+• Owned the voice-to-task pipeline end to end: speech transcription, LLM-based task extraction and editing, and long-form audio processing
+• Built the Bun/Elysia backend, Convex realtime sync, and Google Calendar integration
+• Built the eval harness used to measure AI output quality
+• Set up the team's CI/CD, secrets management, and monorepo tooling
+
+## Auditor | Cert Sud
+
+Jan 2026 – Present | Bucharest, Romania
+
+• Performing ISO/IEC 42001 (AI management systems) and ISO/IEC 27001 (information security) audits for client organizations
+• Assessing AI governance, risk controls, and documentation against certification requirements
+
 ## AI Engineer | CogniSync
 
-Sep 2025 – Present | Bucharest, Romania
+Sep 2025 – Mar 2026 | Bucharest, Romania
 
 • Developed core platform feature that ingested complex legal playbooks and templates to create structured rule systems
 • Engineered AI system capable of processing and understanding large legal documents, reducing manual review time

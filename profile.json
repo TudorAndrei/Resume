@@ -24,7 +24,23 @@
       "start": "Mar 2026",
       "end": "Present",
       "bullets": [
-        "Leading technical strategy and engineering operations"
+        "Setting technical direction and running engineering operations",
+        "Building tooling for AI engineering: eval harnesses, agent infrastructure, developer workflow",
+        "Delivering client AI projects end to end, plus AI consultancy and workshops"
+      ]
+    },
+    {
+      "title": "CTO",
+      "company": "Flow Copilot",
+      "location": "Bucharest, Romania",
+      "start": "Feb 2026",
+      "end": "Present",
+      "bullets": [
+        "Built Flow Copilot, an AI task-management app for people with ADHD (iOS/Android/web)",
+        "Owned the voice-to-task pipeline end to end: speech transcription, LLM-based task extraction and editing, and long-form audio processing",
+        "Built the Bun/Elysia backend, Convex realtime sync, and Google Calendar integration",
+        "Built the eval harness used to measure AI output quality",
+        "Set up the team's CI/CD, secrets management, and monorepo tooling"
       ]
     },
     {
