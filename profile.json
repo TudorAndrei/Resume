@@ -18,6 +18,18 @@
   },
   "work_experience": [
     {
+      "title": "Member of Technical Staff",
+      "company": "Footprints AI",
+      "location": "Bucharest, Romania",
+      "start": "Jun 2026",
+      "end": "Present",
+      "bullets": [
+        "Migrated the core codebase from MongoDB to PostgreSQL, moving the retail-media platform onto a relational data model",
+        "Built an integration plugin platform that extends the web SDK, so new integrations ship as plugins instead of changes to the core",
+        "Improving the data platform that runs ETL across tenant deployments"
+      ]
+    },
+    {
       "title": "CTO",
       "company": "Pythia Sociodynamical Technologies",
       "location": "Bucharest, Romania",

@@ -9,11 +9,21 @@ My background combines production AI engineering with AI governance and audit wo
 - Translating AI strategy into system design, evaluation, monitoring, and controls.
 - Assessing AI governance and documentation against ISO/IEC 42001 expectations.
 
+Right now I am a member of technical staff at Footprints AI, working on the data infrastructure behind a retail-media platform: a MongoDB to PostgreSQL migration of the core codebase, a plugin platform for the web-SDK integration, and the ETL platform that runs across tenant deployments.
+
 Feel free to connect to discuss AI architecture, governance, or systems that need to work in the real world.
 
 ---
 
 # Experience
+
+## Member of Technical Staff | Footprints AI
+
+Jun 2026 – Present | Bucharest, Romania
+
+• Migrated the core codebase from MongoDB to PostgreSQL, moving the retail-media platform onto a relational data model
+• Built an integration plugin platform that extends the web SDK, so new integrations ship as plugins instead of changes to the core
+• Improving the data platform that runs ETL across tenant deployments
 
 ## CTO | Pythia Sociodynamical Technologies
 
