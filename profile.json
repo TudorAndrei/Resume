@@ -212,6 +212,12 @@
   ],
   "certificates": [
     {
+      "name": "ISO 9001:2015 Auditor/Lead Auditor (CQI/IRCA Certified Course)",
+      "issuer": "RINA",
+      "url": "",
+      "date": "Jul 2026"
+    },
+    {
       "name": "ISO/IEC 42001:2023 Internal Auditor",
       "issuer": "TÜV Thüringen Karpat",
       "url": "",

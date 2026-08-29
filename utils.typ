@@ -208,7 +208,8 @@
   url: "",
   date: "",
 ) = {
-  [
+  // Keep the name and the issuer line together across page breaks
+  block(breakable: false, width: 100%)[
     #if url != "" {
       [#link("https://" + url)[*#name*]]
     } else {
